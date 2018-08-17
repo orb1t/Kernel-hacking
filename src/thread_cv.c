@@ -64,7 +64,7 @@ send(struct q *q)
 	void *p = malloc(4);
 	printf(1, "Sender started\n");
    thread_mutex_lock(&q->m);
-   while(q->ptr != 0)    			// for interviews
+   while(q->ptr != 0)    			
 	    thread_cond_wait(&q->cv, &q->m);
    q->ptr = p;
    thread_cond_signal(&q->cv);
