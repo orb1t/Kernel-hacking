@@ -1,0 +1,12 @@
+New files:
+
+1) thread.c -
+- It has implementation of thread_create, thread_join, thread_exit
+- Both spinlocks and mutex are implemented in this same file. By default mutex works here.
+ 	* In order to test spinlocks, please uncomment the spinlock function calls (line: 73,78,99) 
+ 	  and comment the mutex function calls (line: 74,79,100).
+- Run it in xv6 by typing this - thread
+
+2) thread_cv.c -
+- Conditional variables with Mutex is implemented here. A small queue is used to test the solution.
+- Run it in xv6 by typing this - thread_cv
